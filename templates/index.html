@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/index.css') }}">
+    
+</head>
+<body>
+
+    <div class="spotlight hidden">
+        <!-- <img src="./assets/search.svg" class ="icon--search" alt=""> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search icon--search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Iron Man" class="inp--spotlight">      
+    </div>
+    <!-- spotlight-div to toggle -->
+    <div class="main ">
+        <div class="header">
+            <p>Space</p>
+        </div>
+        <div class="content">
+            <div class="font-div text-1">
+                <p class="text-1">
+                    MOVIE
+                </p>
+            </div>
+            <div class="font-div text-2">
+                <p class="text-2">
+                    RECOMME
+                </p>
+            </div>
+            <div class="font-div text-3">
+                <p class="text-3">
+                    NDATION
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main page</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+    <div class="spotlight hidden">
+        <!-- <img src="./assets/search.svg" class ="icon--search" alt=""> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search icon--search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" placeholder="Iron Man" class="inp--spotlight">      
+    </div>
+    <!-- spotlight-div to toggle -->
+    <div class="main">
+        <div class="main-movie">
+            <div class="poster-big">
+                <img src="{{ result['main_movie']['poster'] }}" alt="poster">
+            </div>
+            <div class="details">
+                <h1>{{ result['main_movie']['title'] }}</h1>
+                <p>year {{ result['main_movie']['year'] }}</p>
+                <p>Rating {{ result['main_movie']['ratings'][0]['Value'] }}</p>
+                <p>Released {{ result['main_movie']['released'] }}</p>
+                <p>Genre {{ result['main_movie']['genre'] }}</p>
+                <p>Director {{ result['main_movie']['director'] }}</p>
+                <p>Rated {{ result['main_movie']['rated'] }}</p>
+            </div>
+        </div>
+        <div class="recommended-movie">
+            <div class="poster-small" id="{{ result['recommendations'][0]['title'] }}"><img src="{{ result['recommendations'][0]['poster'] }}" alt="poster"></div>
+            <div class="poster-small" id="{{ result['recommendations'][1]['title'] }}"><img src="{{ result['recommendations'][1]['poster'] }}" alt="poster"></div>
+            <div class="poster-small" id="{{ result['recommendations'][2]['title'] }}"><img src="{{ result['recommendations'][2]['poster'] }}" alt="poster"></div>
+            <div class="poster-small" id="{{ result['recommendations'][3]['title'] }}"><img src="{{ result['recommendations'][3]['poster'] }}" alt="poster"></div>
+            <div class="poster-small" id="{{ result['recommendations'][4]['title'] }}"><img src="{{ result['recommendations'][4]['poster'] }}" alt="poster"></div>
+            <div class="poster-small" id="{{ result['recommendations'][5]['title'] }}"><img src="{{ result['recommendations'][5]['poster'] }}" alt="poster"></div>
+        </div>
+    </div>
+</body>
+<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</html>
