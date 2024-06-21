@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background-color:black;
+    --primary-font:#35FF02;
+    --spotlight:#ceadad;
+    --content-font:Arial, Helvetica, sans-serif;
+    --header-font: "Source Code Pro", monospace;
+}
+
+body{
+    background-color:var(--background-color);
+}
+
+.main{
+    color: var(--primary-font);
+    font-family:var(--header-font)
+}
+
+
+.header{
+    height: 10%;
+    text-align: right;
+    font-size: 30px;
+    padding: 35px;
+}
+
+.content{
+    height: 90%;
+    font-weight: bold;
+    font-size: 150px;
+    font-family:var(--content-font)
+}
+
+div.text-2{
+    text-align: right;
+}
+
+.font-div{
+    padding: 10px;
+}
+
+
+.spotlight-div{
+    opacity: 0.50;
+    filter: blur(10px);
+    z-index: 0;
+}
+
+.spotlight{
+    height: 75px;
+    width: 7in;
+    background: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    outline: none;
+}
+
+.inp--spotlight{
+    height: 70px;
+    width: 5in;
+    background: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    color: var(--spotlight);
+    
+}
+
+.icon--search{
+    width: 40px;
+    margin-top: 16px;
+    margin-left: 15px;
+    stroke: var(--spotlight);
+}
+
+.hidden{
+    display: none;
+}
+
+/* body {
+    cursor: none; /* Hide default cursor 
+    margin: 0;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling 
+} */
