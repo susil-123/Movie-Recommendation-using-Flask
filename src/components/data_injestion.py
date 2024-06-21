@@ -41,7 +41,7 @@ if __name__ == '__main__':
     model_training_obj = Model_Training()
     model_path = model_training_obj.initiate_model_training(preprocessed_data_path)
 
-    get_top_6_obj = get_top_6()
-    get_top_6_obj.output_movie('Lucy')
+    # get_top_6_obj = get_top_6()
+    # get_top_6_obj.output_movie('Lucy')
     
 
