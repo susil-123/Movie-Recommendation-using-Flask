@@ -1,3 +1,6 @@
 numpy
 pandas
--e .
+scikit-learn
+nltk
+requests
+# -e .
