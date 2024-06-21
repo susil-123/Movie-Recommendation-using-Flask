@@ -3,4 +3,5 @@ pandas
 scikit-learn
 nltk
 requests
+flask
 # -e .
