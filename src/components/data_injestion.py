@@ -3,6 +3,7 @@ from src.logger import logging
 from dataclasses import dataclass
 from src.components.data_transformation import Data_Transformation
 from src.components.model_training import Model_Training
+from src.pipeline.predict import get_top_6
 import pandas as pd
 import sys
 import os
@@ -39,5 +40,8 @@ if __name__ == '__main__':
     preprocessed_data_path = data_transformation_obj.initiate_data_transformation(data_path)
     model_training_obj = Model_Training()
     model_path = model_training_obj.initiate_model_training(preprocessed_data_path)
-    print(model_path)
+
+    get_top_6_obj = get_top_6()
+    get_top_6_obj.output_movie('Lucy')
+    
 
