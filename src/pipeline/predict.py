@@ -11,9 +11,8 @@ class get_top_6:
     def __init__(self):
         self.dataset_path = os.path.join('artifacts','preprocessed_df.pkl')
         self.model_path = os.path.join('artifacts','model.pkl')
-    def get_movie_url(self,movie_name):
-        # url = f"http://www.omdbapi.com/?t={movie_name}&apikey=dba30e27"
-        url = f"http://www.omdbapi.com/?t={movie_name}&apikey=941fd69e"
+    def get_movie_url(self,movie_name)
+        url = f"http://www.omdbapi.com/?t={movie_name}&apikey=['YOUR_API_KEY']"
         try:
             response = requests.get(url)
             if response.status_code == 200:
